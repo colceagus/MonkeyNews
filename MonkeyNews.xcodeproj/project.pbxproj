@@ -15,6 +15,7 @@
 		862566471C94106200BC131D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 862566451C94106200BC131D /* LaunchScreen.storyboard */; };
 		862566521C94106300BC131D /* MonkeyNewsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 862566511C94106300BC131D /* MonkeyNewsTests.m */; };
 		8625665D1C94106300BC131D /* MonkeyNewsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8625665C1C94106300BC131D /* MonkeyNewsUITests.m */; };
+		8625666D1C942BB700BC131D /* StoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8625666C1C942BB700BC131D /* StoryModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		862566581C94106300BC131D /* MonkeyNewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonkeyNewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8625665C1C94106300BC131D /* MonkeyNewsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MonkeyNewsUITests.m; sourceTree = "<group>"; };
 		8625665E1C94106300BC131D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8625666B1C942BB700BC131D /* StoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StoryModel.h; path = MonkeyNews/StoryModel.h; sourceTree = "<group>"; };
+		8625666C1C942BB700BC131D /* StoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StoryModel.m; path = MonkeyNews/StoryModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,7 @@
 		8625662B1C94106200BC131D = {
 			isa = PBXGroup;
 			children = (
+				8625666A1C942B6900BC131D /* Models */,
 				862566361C94106200BC131D /* MonkeyNews */,
 				862566501C94106300BC131D /* MonkeyNewsTests */,
 				8625665B1C94106300BC131D /* MonkeyNewsUITests */,
@@ -138,6 +142,15 @@
 				8625665E1C94106300BC131D /* Info.plist */,
 			);
 			path = MonkeyNewsUITests;
+			sourceTree = "<group>";
+		};
+		8625666A1C942B6900BC131D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8625666B1C942BB700BC131D /* StoryModel.h */,
+				8625666C1C942BB700BC131D /* StoryModel.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8625663F1C94106200BC131D /* ViewController.m in Sources */,
+				8625666D1C942BB700BC131D /* StoryModel.m in Sources */,
 				8625663C1C94106200BC131D /* AppDelegate.m in Sources */,
 				862566391C94106200BC131D /* main.m in Sources */,
 			);
@@ -498,6 +512,7 @@
 				862566631C94106300BC131D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		862566641C94106300BC131D /* Build configuration list for PBXNativeTarget "MonkeyNewsTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +521,7 @@
 				862566661C94106300BC131D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		862566671C94106300BC131D /* Build configuration list for PBXNativeTarget "MonkeyNewsUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +530,7 @@
 				862566691C94106300BC131D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

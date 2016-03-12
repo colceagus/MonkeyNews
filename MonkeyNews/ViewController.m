@@ -7,9 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "StoryCollection.h"
 
 @interface ViewController () {
-    NSMutableArray* _dataSource;
+    StoryCollection* _dataSource;
 }
 
 @end
@@ -20,14 +21,23 @@
     self = [super initWithCoder:aDecoder];
     
     if (self) {
-        _dataSource = [NSMutableArray arrayWithArray:@[@"1", @"2", @"3", @"4", @"5"]];
+        // aloca memorie -> initializeaza
+        // new cheama el alloc si apoi init
+        _dataSource = [[StoryCollection alloc ]init];
+        
+        StoryModel* newStory = [StoryModel new];
+        newStory.title = [NSString stringWithFormat:@"title %d", 1];
+        newStory.id = [NSString stringWithFormat:@"id %d", 1];
+        newStory.url = [NSString stringWithFormat:@"http://myapi.com/story?id=%d", 1];
+        
+        [_dataSource addStory:newStory];
     }
     
     return self;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return _dataSource.count;
+    return _dataSource.topStories.count;
 }
 
 // Metoda de pe delegate-ul de pe datasource (cate randuri sunt intr-o sectiune) iti cere un view
@@ -40,7 +50,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"readerCellId"];
     }
     
-    cell.textLabel.text = _dataSource[indexPath.row];
+    cell.textLabel.text = _dataSource.topStories[indexPath.row].title;
     
     return cell;
 }

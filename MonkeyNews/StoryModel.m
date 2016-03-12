@@ -10,6 +10,6 @@
 
 @implementation StoryModel
 
-- 
+
 
 @end

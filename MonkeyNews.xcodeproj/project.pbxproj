@@ -16,6 +16,7 @@
 		862566521C94106300BC131D /* MonkeyNewsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 862566511C94106300BC131D /* MonkeyNewsTests.m */; };
 		8625665D1C94106300BC131D /* MonkeyNewsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8625665C1C94106300BC131D /* MonkeyNewsUITests.m */; };
 		8625666D1C942BB700BC131D /* StoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8625666C1C942BB700BC131D /* StoryModel.m */; };
+		862566701C942DE700BC131D /* StoryCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 8625666F1C942DE700BC131D /* StoryCollection.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		8625665E1C94106300BC131D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8625666B1C942BB700BC131D /* StoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StoryModel.h; path = MonkeyNews/StoryModel.h; sourceTree = "<group>"; };
 		8625666C1C942BB700BC131D /* StoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StoryModel.m; path = MonkeyNews/StoryModel.m; sourceTree = "<group>"; };
+		8625666E1C942DE700BC131D /* StoryCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StoryCollection.h; path = MonkeyNews/StoryCollection.h; sourceTree = "<group>"; };
+		8625666F1C942DE700BC131D /* StoryCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StoryCollection.m; path = MonkeyNews/StoryCollection.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +152,8 @@
 			children = (
 				8625666B1C942BB700BC131D /* StoryModel.h */,
 				8625666C1C942BB700BC131D /* StoryModel.m */,
+				8625666E1C942DE700BC131D /* StoryCollection.h */,
+				8625666F1C942DE700BC131D /* StoryCollection.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -287,6 +292,7 @@
 				8625666D1C942BB700BC131D /* StoryModel.m in Sources */,
 				8625663C1C94106200BC131D /* AppDelegate.m in Sources */,
 				862566391C94106200BC131D /* main.m in Sources */,
+				862566701C942DE700BC131D /* StoryCollection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

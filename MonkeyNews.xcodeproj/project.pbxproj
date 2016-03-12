@@ -17,6 +17,7 @@
 		8625665D1C94106300BC131D /* MonkeyNewsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8625665C1C94106300BC131D /* MonkeyNewsUITests.m */; };
 		8625666D1C942BB700BC131D /* StoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8625666C1C942BB700BC131D /* StoryModel.m */; };
 		862566701C942DE700BC131D /* StoryCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 8625666F1C942DE700BC131D /* StoryCollection.m */; };
+		862566741C94437A00BC131D /* StoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 862566731C94437A00BC131D /* StoryTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		8625666C1C942BB700BC131D /* StoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StoryModel.m; path = MonkeyNews/StoryModel.m; sourceTree = "<group>"; };
 		8625666E1C942DE700BC131D /* StoryCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StoryCollection.h; path = MonkeyNews/StoryCollection.h; sourceTree = "<group>"; };
 		8625666F1C942DE700BC131D /* StoryCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StoryCollection.m; path = MonkeyNews/StoryCollection.m; sourceTree = "<group>"; };
+		862566721C94437A00BC131D /* StoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryTableViewCell.h; sourceTree = "<group>"; };
+		862566731C94437A00BC131D /* StoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +90,7 @@
 		8625662B1C94106200BC131D = {
 			isa = PBXGroup;
 			children = (
+				862566711C94431A00BC131D /* Views */,
 				8625666A1C942B6900BC131D /* Models */,
 				862566361C94106200BC131D /* MonkeyNews */,
 				862566501C94106300BC131D /* MonkeyNewsTests */,
@@ -156,6 +160,15 @@
 				8625666F1C942DE700BC131D /* StoryCollection.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		862566711C94431A00BC131D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				862566721C94437A00BC131D /* StoryTableViewCell.h */,
+				862566731C94437A00BC131D /* StoryTableViewCell.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8625663F1C94106200BC131D /* ViewController.m in Sources */,
+				862566741C94437A00BC131D /* StoryTableViewCell.m in Sources */,
 				8625666D1C942BB700BC131D /* StoryModel.m in Sources */,
 				8625663C1C94106200BC131D /* AppDelegate.m in Sources */,
 				862566391C94106200BC131D /* main.m in Sources */,

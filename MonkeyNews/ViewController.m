@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "StoryCollection.h"
+#import "StoryTableViewCell.h"
 
 @interface ViewController () {
     StoryCollection* _dataSource;
@@ -24,13 +25,16 @@
         // aloca memorie -> initializeaza
         // new cheama el alloc si apoi init
         _dataSource = [[StoryCollection alloc ]init];
-        
-        StoryModel* newStory = [StoryModel new];
-        newStory.title = [NSString stringWithFormat:@"title %d", 1];
-        newStory.id = [NSString stringWithFormat:@"id %d", 1];
-        newStory.url = [NSString stringWithFormat:@"http://myapi.com/story?id=%d", 1];
-        
-        [_dataSource addStory:newStory];
+        StoryModel* newStory ;
+        for (int i = 0; i < 10; i++) {
+            newStory = [StoryModel new];
+            
+            newStory.title = [NSString stringWithFormat:@"title %d", i];
+            newStory.id = [NSString stringWithFormat:@"id %d", i];
+            newStory.url = [NSString stringWithFormat:@"http://myapi.com/story?id=%d", i];
+            
+            [_dataSource addStory:newStory];
+        }
     }
     
     return self;
@@ -42,16 +46,13 @@
 
 // Metoda de pe delegate-ul de pe datasource (cate randuri sunt intr-o sectiune) iti cere un view
 // pentru cell-ul tau
-- (UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (StoryTableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"readerCellId"];
+    NSString* cellID = @"storyCellId";
+    StoryTableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
     
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"readerCellId"];
-    }
-    
-    cell.textLabel.text = _dataSource.topStories[indexPath.row].title;
-    
+    cell.titleLabel.text = _dataSource.topStories[indexPath.row].title;
+    cell.idLabel.text = _dataSource.topStories[indexPath.row].id;
     return cell;
 }
 

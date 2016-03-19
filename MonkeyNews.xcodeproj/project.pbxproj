@@ -13,22 +13,24 @@
 		862566421C94106200BC131D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 862566401C94106200BC131D /* Main.storyboard */; };
 		862566441C94106200BC131D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 862566431C94106200BC131D /* Assets.xcassets */; };
 		862566471C94106200BC131D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 862566451C94106200BC131D /* LaunchScreen.storyboard */; };
-		862566521C94106300BC131D /* MonkeyNewsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 862566511C94106300BC131D /* MonkeyNewsTests.m */; };
 		8625665D1C94106300BC131D /* MonkeyNewsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8625665C1C94106300BC131D /* MonkeyNewsUITests.m */; };
 		8625666D1C942BB700BC131D /* StoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8625666C1C942BB700BC131D /* StoryModel.m */; };
 		862566701C942DE700BC131D /* StoryCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 8625666F1C942DE700BC131D /* StoryCollection.m */; };
 		862566741C94437A00BC131D /* StoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 862566731C94437A00BC131D /* StoryTableViewCell.m */; };
+		862E6A741C9D45FB004A2594 /* HackerNewsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862E6A731C9D45FB004A2594 /* HackerNewsAPI.swift */; };
+		862E6A761C9D4C06004A2594 /* HackerNewsComm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862E6A751C9D4C06004A2594 /* HackerNewsComm.swift */; };
+		862E6A7E1C9D5F87004A2594 /* MonkeyNewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862E6A7D1C9D5F87004A2594 /* MonkeyNewsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		8625664E1C94106300BC131D /* PBXContainerItemProxy */ = {
+		862566591C94106300BC131D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8625662C1C94106200BC131D /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 862566331C94106200BC131D;
 			remoteInfo = MonkeyNews;
 		};
-		862566591C94106300BC131D /* PBXContainerItemProxy */ = {
+		862E6A801C9D5F87004A2594 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8625662C1C94106200BC131D /* Project object */;
 			proxyType = 1;
@@ -48,9 +50,6 @@
 		862566431C94106200BC131D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		862566461C94106200BC131D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		862566481C94106200BC131D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8625664D1C94106300BC131D /* MonkeyNewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonkeyNewsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		862566511C94106300BC131D /* MonkeyNewsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MonkeyNewsTests.m; sourceTree = "<group>"; };
-		862566531C94106300BC131D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		862566581C94106300BC131D /* MonkeyNewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonkeyNewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8625665C1C94106300BC131D /* MonkeyNewsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MonkeyNewsUITests.m; sourceTree = "<group>"; };
 		8625665E1C94106300BC131D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,17 +59,16 @@
 		8625666F1C942DE700BC131D /* StoryCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StoryCollection.m; path = MonkeyNews/StoryCollection.m; sourceTree = "<group>"; };
 		862566721C94437A00BC131D /* StoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryTableViewCell.h; sourceTree = "<group>"; };
 		862566731C94437A00BC131D /* StoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryTableViewCell.m; sourceTree = "<group>"; };
+		862E6A721C9D45FB004A2594 /* MonkeyNews-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MonkeyNews-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		862E6A731C9D45FB004A2594 /* HackerNewsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackerNewsAPI.swift; sourceTree = "<group>"; };
+		862E6A751C9D4C06004A2594 /* HackerNewsComm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackerNewsComm.swift; sourceTree = "<group>"; };
+		862E6A7B1C9D5F87004A2594 /* MonkeyNewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonkeyNewsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		862E6A7D1C9D5F87004A2594 /* MonkeyNewsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonkeyNewsTests.swift; sourceTree = "<group>"; };
+		862E6A7F1C9D5F87004A2594 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		862566311C94106200BC131D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8625664A1C94106300BC131D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -84,17 +82,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		862E6A781C9D5F87004A2594 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		8625662B1C94106200BC131D = {
 			isa = PBXGroup;
 			children = (
+				862E6A711C9D45C6004A2594 /* Comm */,
 				862566711C94431A00BC131D /* Views */,
 				8625666A1C942B6900BC131D /* Models */,
 				862566361C94106200BC131D /* MonkeyNews */,
-				862566501C94106300BC131D /* MonkeyNewsTests */,
 				8625665B1C94106300BC131D /* MonkeyNewsUITests */,
+				862E6A7C1C9D5F87004A2594 /* MonkeyNewsTests */,
 				862566351C94106200BC131D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,8 +109,8 @@
 			isa = PBXGroup;
 			children = (
 				862566341C94106200BC131D /* MonkeyNews.app */,
-				8625664D1C94106300BC131D /* MonkeyNewsTests.xctest */,
 				862566581C94106300BC131D /* MonkeyNewsUITests.xctest */,
+				862E6A7B1C9D5F87004A2594 /* MonkeyNewsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,18 +134,10 @@
 		862566371C94106200BC131D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				862E6A721C9D45FB004A2594 /* MonkeyNews-Bridging-Header.h */,
 				862566381C94106200BC131D /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		862566501C94106300BC131D /* MonkeyNewsTests */ = {
-			isa = PBXGroup;
-			children = (
-				862566511C94106300BC131D /* MonkeyNewsTests.m */,
-				862566531C94106300BC131D /* Info.plist */,
-			);
-			path = MonkeyNewsTests;
 			sourceTree = "<group>";
 		};
 		8625665B1C94106300BC131D /* MonkeyNewsUITests */ = {
@@ -171,6 +169,24 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		862E6A711C9D45C6004A2594 /* Comm */ = {
+			isa = PBXGroup;
+			children = (
+				862E6A731C9D45FB004A2594 /* HackerNewsAPI.swift */,
+				862E6A751C9D4C06004A2594 /* HackerNewsComm.swift */,
+			);
+			name = Comm;
+			sourceTree = "<group>";
+		};
+		862E6A7C1C9D5F87004A2594 /* MonkeyNewsTests */ = {
+			isa = PBXGroup;
+			children = (
+				862E6A7D1C9D5F87004A2594 /* MonkeyNewsTests.swift */,
+				862E6A7F1C9D5F87004A2594 /* Info.plist */,
+			);
+			path = MonkeyNewsTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -191,24 +207,6 @@
 			productReference = 862566341C94106200BC131D /* MonkeyNews.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8625664C1C94106300BC131D /* MonkeyNewsTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 862566641C94106300BC131D /* Build configuration list for PBXNativeTarget "MonkeyNewsTests" */;
-			buildPhases = (
-				862566491C94106300BC131D /* Sources */,
-				8625664A1C94106300BC131D /* Frameworks */,
-				8625664B1C94106300BC131D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8625664F1C94106300BC131D /* PBXTargetDependency */,
-			);
-			name = MonkeyNewsTests;
-			productName = MonkeyNewsTests;
-			productReference = 8625664D1C94106300BC131D /* MonkeyNewsTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		862566571C94106300BC131D /* MonkeyNewsUITests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 862566671C94106300BC131D /* Build configuration list for PBXNativeTarget "MonkeyNewsUITests" */;
@@ -227,23 +225,42 @@
 			productReference = 862566581C94106300BC131D /* MonkeyNewsUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		862E6A7A1C9D5F87004A2594 /* MonkeyNewsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 862E6A821C9D5F87004A2594 /* Build configuration list for PBXNativeTarget "MonkeyNewsTests" */;
+			buildPhases = (
+				862E6A771C9D5F87004A2594 /* Sources */,
+				862E6A781C9D5F87004A2594 /* Frameworks */,
+				862E6A791C9D5F87004A2594 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				862E6A811C9D5F87004A2594 /* PBXTargetDependency */,
+			);
+			name = MonkeyNewsTests;
+			productName = MonkeyNewsTests;
+			productReference = 862E6A7B1C9D5F87004A2594 /* MonkeyNewsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		8625662C1C94106200BC131D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = training;
 				TargetAttributes = {
 					862566331C94106200BC131D = {
 						CreatedOnToolsVersion = 7.2.1;
 					};
-					8625664C1C94106300BC131D = {
+					862566571C94106300BC131D = {
 						CreatedOnToolsVersion = 7.2.1;
 						TestTargetID = 862566331C94106200BC131D;
 					};
-					862566571C94106300BC131D = {
+					862E6A7A1C9D5F87004A2594 = {
 						CreatedOnToolsVersion = 7.2.1;
 						TestTargetID = 862566331C94106200BC131D;
 					};
@@ -263,7 +280,7 @@
 			projectRoot = "";
 			targets = (
 				862566331C94106200BC131D /* MonkeyNews */,
-				8625664C1C94106300BC131D /* MonkeyNewsTests */,
+				862E6A7A1C9D5F87004A2594 /* MonkeyNewsTests */,
 				862566571C94106300BC131D /* MonkeyNewsUITests */,
 			);
 		};
@@ -280,14 +297,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8625664B1C94106300BC131D /* Resources */ = {
+		862566561C94106300BC131D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		862566561C94106300BC131D /* Resources */ = {
+		862E6A791C9D5F87004A2594 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -301,20 +318,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				862E6A741C9D45FB004A2594 /* HackerNewsAPI.swift in Sources */,
 				8625663F1C94106200BC131D /* ViewController.m in Sources */,
 				862566741C94437A00BC131D /* StoryTableViewCell.m in Sources */,
 				8625666D1C942BB700BC131D /* StoryModel.m in Sources */,
 				8625663C1C94106200BC131D /* AppDelegate.m in Sources */,
 				862566391C94106200BC131D /* main.m in Sources */,
+				862E6A761C9D4C06004A2594 /* HackerNewsComm.swift in Sources */,
 				862566701C942DE700BC131D /* StoryCollection.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		862566491C94106300BC131D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				862566521C94106300BC131D /* MonkeyNewsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,18 +337,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		862E6A771C9D5F87004A2594 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				862E6A7E1C9D5F87004A2594 /* MonkeyNewsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		8625664F1C94106300BC131D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 862566331C94106200BC131D /* MonkeyNews */;
-			targetProxy = 8625664E1C94106300BC131D /* PBXContainerItemProxy */;
-		};
 		8625665A1C94106300BC131D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 862566331C94106200BC131D /* MonkeyNews */;
 			targetProxy = 862566591C94106300BC131D /* PBXContainerItemProxy */;
+		};
+		862E6A811C9D5F87004A2594 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 862566331C94106200BC131D /* MonkeyNews */;
+			targetProxy = 862E6A801C9D5F87004A2594 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -447,10 +466,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MonkeyNews/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Gorillaz.MonkeyNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MonkeyNews-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -458,34 +480,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MonkeyNews/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Gorillaz.MonkeyNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		862566651C94106300BC131D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = MonkeyNewsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Gorillaz.MonkeyNewsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MonkeyNews.app/MonkeyNews";
-			};
-			name = Debug;
-		};
-		862566661C94106300BC131D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = MonkeyNewsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Gorillaz.MonkeyNewsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MonkeyNews.app/MonkeyNews";
+				SWIFT_OBJC_BRIDGING_HEADER = "MonkeyNews-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -513,6 +513,31 @@
 			};
 			name = Release;
 		};
+		862E6A831C9D5F87004A2594 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MonkeyNewsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Gorillaz.MonkeyNewsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MonkeyNews.app/MonkeyNews";
+			};
+			name = Debug;
+		};
+		862E6A841C9D5F87004A2594 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MonkeyNewsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Gorillaz.MonkeyNewsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MonkeyNews.app/MonkeyNews";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -534,15 +559,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		862566641C94106300BC131D /* Build configuration list for PBXNativeTarget "MonkeyNewsTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				862566651C94106300BC131D /* Debug */,
-				862566661C94106300BC131D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		862566671C94106300BC131D /* Build configuration list for PBXNativeTarget "MonkeyNewsUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -551,6 +567,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		862E6A821C9D5F87004A2594 /* Build configuration list for PBXNativeTarget "MonkeyNewsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				862E6A831C9D5F87004A2594 /* Debug */,
+				862E6A841C9D5F87004A2594 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

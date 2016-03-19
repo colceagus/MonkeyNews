@@ -18,6 +18,9 @@
 
 @implementation ViewController
 
+
+// - non-static
+// + statica
 - (instancetype) initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     

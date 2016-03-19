@@ -15,7 +15,7 @@ class HackerNewsAPI: NSObject {
     static let topStoryEndpoint:String = "https://hacker-news.firebaseio.com/v0/topstories.json"
     
     // daca vrem ca param sa isi poata schimba valoarea pe parcursul prelucrarii din functie
-    static func storyEndopint( var id:String) -> String {
+    static func storyEndopint(id:String) -> String {
         let _ = "ceva string id: \(id)"
         
         // \(numevariabila) => interpolare string variabila

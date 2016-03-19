@@ -10,9 +10,7 @@
 #import "StoryCollection.h"
 #import "StoryTableViewCell.h"
 
-@interface ViewController () {
-    StoryCollection* _dataSource;
-}
+@interface ViewController ()
 
 @end
 
@@ -25,26 +23,13 @@
     self = [super initWithCoder:aDecoder];
     
     if (self) {
-        // aloca memorie -> initializeaza
-        // new cheama el alloc si apoi init
-        _dataSource = [[StoryCollection alloc ]init];
-        StoryModel* newStory ;
-        for (int i = 0; i < 10; i++) {
-            newStory = [StoryModel new];
-            
-            newStory.title = [NSString stringWithFormat:@"title %d", i];
-            newStory.id = [NSString stringWithFormat:@"id %d", i];
-            newStory.url = [NSString stringWithFormat:@"http://myapi.com/story?id=%d", i];
-            
-            [_dataSource addStory:newStory];
-        }
     }
     
     return self;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return _dataSource.topStories.count;
+    return _dataSource.count;
 }
 
 // Metoda de pe delegate-ul de pe datasource (cate randuri sunt intr-o sectiune) iti cere un view
@@ -54,9 +39,15 @@
     NSString* cellID = @"storyCellId";
     StoryTableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
     
-    cell.titleLabel.text = _dataSource.topStories[indexPath.row].title;
-    cell.idLabel.text = _dataSource.topStories[indexPath.row].id;
+    cell.titleLabel.text = _dataSource[indexPath.row].title;
+    cell.idLabel.text = _dataSource[indexPath.row].id;
     return cell;
+}
+
+- (void) setDataSource:(NSArray<StoryModel*>*) dataSource {
+    _dataSource = dataSource;
+    
+    [self.storiesTable reloadData];
 }
 
 - (void)viewDidLoad {

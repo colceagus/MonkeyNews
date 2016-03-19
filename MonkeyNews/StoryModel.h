@@ -11,7 +11,7 @@
 @interface StoryModel : NSObject
 
 // default atomic, in orice moment starea obiectului este persistenta
-// bazat pe tranzactii, ori accesezi inainte sau dupa ce s-a facut get/set.
+// bazat pe tranzactii, ori acceseaza inainte sau dupa ce s-a facut get/set.
 @property (nonatomic) NSString* title;
 @property (nonatomic) NSString* id;
 @property (nonatomic) NSString* url;

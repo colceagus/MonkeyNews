@@ -3,3 +3,4 @@
 //
 
 #include "StoryCollection.h"
+#include "ViewController.h"

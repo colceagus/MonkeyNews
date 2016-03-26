@@ -28,9 +28,15 @@
                                                     <rect key="frame" x="8" y="7" width="46" height="30"/>
                                                     <state key="normal" title="Button"/>
                                                 </button>
+                                                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="US7-hy-TtQ" customClass="FBSDKProfilePictureView">
+                                                    <rect key="frame" x="527" y="-9" width="65" height="61"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="WWz-BU-qYY" firstAttribute="centerY" secondItem="xCj-mC-cz3" secondAttribute="centerY" id="2ra-So-hlM"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="US7-hy-TtQ" secondAttribute="trailing" id="7Q4-0I-eRG"/>
+                                                <constraint firstItem="US7-hy-TtQ" firstAttribute="centerY" secondItem="xCj-mC-cz3" secondAttribute="centerY" id="J1y-Le-Y9R"/>
                                                 <constraint firstAttribute="leadingMargin" secondItem="WWz-BU-qYY" secondAttribute="leading" id="aqT-9R-P6k"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -46,7 +52,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dL3-Qf-kdM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="959" y="-267"/>
+            <point key="canvasLocation" x="959" y="-267.5"/>
         </scene>
         <!--HackerNews Stories-->
         <scene sceneID="tne-QT-ifu">

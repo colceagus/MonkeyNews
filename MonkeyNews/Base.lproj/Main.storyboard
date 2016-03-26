@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Hacker Stories-->
+        <!--HackerNews Stories-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController title="HackerNews Stories" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -72,16 +72,50 @@
                     <navigationItem key="navigationItem" title="Hacker Stories" id="pZi-kN-Szo"/>
                     <connections>
                         <outlet property="storiesTable" destination="DcU-ry-BFA" id="8aI-ua-Yd6"/>
+                        <segue destination="2zj-SM-Mbh" kind="show" identifier="go_to_show_story" id="ito-PF-BTI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1818" y="735"/>
         </scene>
-        <!--HackerNews-->
+        <!--Story View Controller-->
+        <scene sceneID="cs5-rz-A68">
+            <objects>
+                <viewController id="2zj-SM-Mbh" customClass="StoryViewController" customModule="MonkeyNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5Z0-nC-ijk"/>
+                        <viewControllerLayoutGuide type="bottom" id="hqG-VO-eeC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2PA-ea-XxB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Odg-My-wvQ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Odg-My-wvQ" firstAttribute="centerX" secondItem="2PA-ea-XxB" secondAttribute="centerX" id="1Yr-u0-jOK"/>
+                            <constraint firstAttribute="height" secondItem="Odg-My-wvQ" secondAttribute="height" id="Csz-WP-Bm7"/>
+                            <constraint firstItem="Odg-My-wvQ" firstAttribute="width" secondItem="2PA-ea-XxB" secondAttribute="width" id="Fq2-e6-jFD"/>
+                            <constraint firstItem="Odg-My-wvQ" firstAttribute="centerY" secondItem="2PA-ea-XxB" secondAttribute="centerY" id="XpC-6M-mra"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="Odg-My-wvQ" id="des-XH-cBE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9WC-9i-cie" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1818" y="1572"/>
+        </scene>
+        <!--HackerNews Story Options-->
         <scene sceneID="IUO-ku-ZPp">
             <objects>
-                <tableViewController title="HackerNews" id="k1t-J0-6zW" customClass="HackerNewsTableViewController" customModule="MonkeyNews" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="HackerNews Story Options" id="k1t-J0-6zW" customClass="HackerNewsTableViewController" customModule="MonkeyNews" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Emc-Hn-hm6">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -151,10 +185,10 @@
             </objects>
             <point key="canvasLocation" x="1140" y="735"/>
         </scene>
-        <!--HackerNews-->
+        <!--HackerNews Entry Point-->
         <scene sceneID="Ce8-on-X0X">
             <objects>
-                <navigationController title="HackerNews" id="u8b-8g-8AA" sceneMemberID="viewController">
+                <navigationController title="HackerNews Entry Point" id="u8b-8g-8AA" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xSj-yg-14M">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

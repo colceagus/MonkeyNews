@@ -21,6 +21,7 @@
 		862E6A761C9D4C06004A2594 /* HackerNewsComm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862E6A751C9D4C06004A2594 /* HackerNewsComm.swift */; };
 		862E6A7E1C9D5F87004A2594 /* MonkeyNewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862E6A7D1C9D5F87004A2594 /* MonkeyNewsTests.swift */; };
 		864AE4AE1C9D73C50086C5C8 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 864AE4AD1C9D73C50086C5C8 /* Podfile */; };
+		86984C961CA686300042A9DF /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86984C951CA686300042A9DF /* StoryViewController.swift */; };
 		86A8385F1C9D8E1C00729968 /* HackerNewsTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A8385E1C9D8E1C00729968 /* HackerNewsTableTableViewController.swift */; };
 		E3CC1660C3C8D34F21A2ECF5 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95BDFFF23A18820A9E611FEE /* Pods.framework */; };
 /* End PBXBuildFile section */
@@ -47,8 +48,8 @@
 		862566381C94106200BC131D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8625663A1C94106200BC131D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8625663B1C94106200BC131D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8625663D1C94106200BC131D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8625663E1C94106200BC131D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8625663D1C94106200BC131D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = MonkeyNews/ViewController.h; sourceTree = "<group>"; };
+		8625663E1C94106200BC131D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = MonkeyNews/ViewController.m; sourceTree = "<group>"; };
 		862566411C94106200BC131D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		862566431C94106200BC131D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		862566461C94106200BC131D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -69,6 +70,7 @@
 		862E6A7D1C9D5F87004A2594 /* MonkeyNewsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonkeyNewsTests.swift; sourceTree = "<group>"; };
 		862E6A7F1C9D5F87004A2594 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		864AE4AD1C9D73C50086C5C8 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		86984C951CA686300042A9DF /* StoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
 		86A8385E1C9D8E1C00729968 /* HackerNewsTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackerNewsTableTableViewController.swift; sourceTree = "<group>"; };
 		95BDFFF23A18820A9E611FEE /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB647ED86534567A36B9575F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -141,8 +143,6 @@
 				8625666A1C942B6900BC131D /* Models */,
 				8625663A1C94106200BC131D /* AppDelegate.h */,
 				8625663B1C94106200BC131D /* AppDelegate.m */,
-				8625663D1C94106200BC131D /* ViewController.h */,
-				8625663E1C94106200BC131D /* ViewController.m */,
 				862566401C94106200BC131D /* Main.storyboard */,
 				862566431C94106200BC131D /* Assets.xcassets */,
 				862566451C94106200BC131D /* LaunchScreen.storyboard */,
@@ -214,7 +214,10 @@
 		86A8385D1C9D8DD900729968 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8625663D1C94106200BC131D /* ViewController.h */,
+				8625663E1C94106200BC131D /* ViewController.m */,
 				86A8385E1C9D8E1C00729968 /* HackerNewsTableTableViewController.swift */,
+				86984C951CA686300042A9DF /* StoryViewController.swift */,
 			);
 			name = Controllers;
 			path = ..;
@@ -412,6 +415,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86984C961CA686300042A9DF /* StoryViewController.swift in Sources */,
 				862E6A741C9D45FB004A2594 /* HackerNewsAPI.swift in Sources */,
 				8625663F1C94106200BC131D /* ViewController.m in Sources */,
 				86A8385F1C9D8E1C00729968 /* HackerNewsTableTableViewController.swift in Sources */,

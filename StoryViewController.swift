@@ -1,18 +1,35 @@
 //
-//  HackerNewsTableTableViewController.swift
+//  StoryViewController.swift
 //  MonkeyNews
 //
-//  Created by training on 3/19/16.
+//  Created by training on 3/26/16.
 //  Copyright © 2016 training. All rights reserved.
 //
 
 import UIKit
 
-class HackerNewsTableViewController: UITableViewController {
+class StoryViewController: UIViewController {
 
+    @IBOutlet weak var webView: UIWebView!
+    
+    func goToURL(urls:String) {
+        // guard conditie else {
+        //
+        // }
+        guard let url:NSURL = NSURL(string: urls) else {
+            return
+        }
+        
+        let req = NSURLRequest(URL: url);
+        
+        self.loadViewIfNeeded();
+        
+        webView.loadRequest(req);
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+   
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -72,51 +89,14 @@ class HackerNewsTableViewController: UITableViewController {
     }
     */
 
-    
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        
-        print(segue.identifier)
-        
-        let comm = HackerNewsComm()
-        
-        // unwrap
-        switch (segue.identifier!) {
-            case "go_to_top_stories":
-                comm.fetchTopStories({
-                    (collection:StoryCollection) in
-//                    if let controller:ViewController = segue.destinationViewController as? ViewController {
-//                        controller.dataSource = collection.topStories()
-//                    }
-
-                    let topStories = collection.topStories()
-                    
-                    var i = 0;
-                    
-                    for story in topStories {
-                        comm.populateStory(story){ story in
-                            i++
-                            
-                            if i >= 10 {
-                                (segue.destinationViewController as! ViewController).dataSource = topStories
-                            }
-                        }
-                    }
-                    
-                    })
-
-                
-            break
-            case "go_to_new_stories":
-            break
-            default:
-            break;
-        }
     }
-    
+    */
 
 }

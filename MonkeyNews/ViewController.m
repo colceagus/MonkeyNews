@@ -9,8 +9,12 @@
 #import "ViewController.h"
 #import "StoryCollection.h"
 #import "StoryTableViewCell.h"
+// pentru a face available clasele din swift in objC
+#import "MonkeyNews-Swift.h"
 
 @interface ViewController ()
+
+@property (nonatomic) StoryModel* selectedStory;
 
 @end
 
@@ -42,6 +46,21 @@
     cell.titleLabel.text = _dataSource[indexPath.row].title;
     cell.idLabel.text = _dataSource[indexPath.row].id;
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    self.selectedStory = _dataSource[indexPath.row];
+    
+    [self performSegueWithIdentifier:@"go_to_show_story" sender:self];
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([segue.identifier isEqualToString:@"go_to_show_story"]) {
+        StoryViewController* dest = (StoryViewController*) segue.destinationViewController;
+        [dest goToURL:self.selectedStory.url];
+    }
+    
 }
 
 - (void) setDataSource:(NSArray<StoryModel*>*) dataSource {

@@ -25,10 +25,9 @@ class HackerNewsComm {
                 let story = StoryModel()
                 story.id = String(value.int!)
                 
-                
                 collection.addStory(story)
             }
-            
+            // pentru a rula ceva pe thread-ul de UI
             dispatch_async(dispatch_get_main_queue()) {
                 completionHandler(collection);
             }
@@ -44,7 +43,7 @@ class HackerNewsComm {
     // returneaza void implicit
     func populateStory(story: StoryModel, completionHandler:(StoryModel)->Void) {
         
-        let url = NSURL(string: HackerNewsAPI.topStoryEndpoint);
+        let url = NSURL(string: HackerNewsAPI.storyEndpoint(story.id));
         
         let task = NSURLSession.sharedSession().dataTaskWithURL(url!, completionHandler:{
             (data:NSData?, response:NSURLResponse?, error:NSError?) -> Void in
@@ -55,7 +54,9 @@ class HackerNewsComm {
                     story.url = json["url"].string
                     story.title = json["title"].string
                     
-                    completionHandler(story)
+                    dispatch_async(dispatch_get_main_queue()){
+                        completionHandler(story)
+                    }
                 }
             
         });

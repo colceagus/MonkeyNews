@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D14D1D91CAFB0F30092D471 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D14D1D81CAFB0F30092D471 /* SettingsTableViewController.swift */; };
+		2D14D1DC1CAFB92B0092D471 /* SettingsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D14D1DB1CAFB92B0092D471 /* SettingsKey.swift */; };
 		862566391C94106200BC131D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 862566381C94106200BC131D /* main.m */; };
 		8625663C1C94106200BC131D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8625663B1C94106200BC131D /* AppDelegate.m */; };
 		8625663F1C94106200BC131D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8625663E1C94106200BC131D /* ViewController.m */; };
@@ -44,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D14D1D81CAFB0F30092D471 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		2D14D1DB1CAFB92B0092D471 /* SettingsKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsKey.swift; sourceTree = "<group>"; };
 		862566341C94106200BC131D /* MonkeyNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonkeyNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		862566381C94106200BC131D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8625663A1C94106200BC131D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -111,6 +115,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2D14D1DA1CAFB8CB0092D471 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				2D14D1DB1CAFB92B0092D471 /* SettingsKey.swift */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
 		8625662B1C94106200BC131D = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +149,7 @@
 		862566361C94106200BC131D /* MonkeyNews */ = {
 			isa = PBXGroup;
 			children = (
+				2D14D1DA1CAFB8CB0092D471 /* Settings */,
 				86A8385D1C9D8DD900729968 /* Controllers */,
 				862E6A711C9D45C6004A2594 /* Comm */,
 				862566711C94431A00BC131D /* Views */,
@@ -218,6 +231,7 @@
 				8625663E1C94106200BC131D /* ViewController.m */,
 				86A8385E1C9D8E1C00729968 /* HackerNewsTableTableViewController.swift */,
 				86984C951CA686300042A9DF /* StoryViewController.swift */,
+				2D14D1D81CAFB0F30092D471 /* SettingsTableViewController.swift */,
 			);
 			name = Controllers;
 			path = ..;
@@ -418,12 +432,14 @@
 				86984C961CA686300042A9DF /* StoryViewController.swift in Sources */,
 				862E6A741C9D45FB004A2594 /* HackerNewsAPI.swift in Sources */,
 				8625663F1C94106200BC131D /* ViewController.m in Sources */,
+				2D14D1D91CAFB0F30092D471 /* SettingsTableViewController.swift in Sources */,
 				86A8385F1C9D8E1C00729968 /* HackerNewsTableTableViewController.swift in Sources */,
 				862566741C94437A00BC131D /* StoryTableViewCell.m in Sources */,
 				8625666D1C942BB700BC131D /* StoryModel.m in Sources */,
 				8625663C1C94106200BC131D /* AppDelegate.m in Sources */,
 				862566391C94106200BC131D /* main.m in Sources */,
 				862E6A761C9D4C06004A2594 /* HackerNewsComm.swift in Sources */,
+				2D14D1DC1CAFB92B0092D471 /* SettingsKey.swift in Sources */,
 				862566701C942DE700BC131D /* StoryCollection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

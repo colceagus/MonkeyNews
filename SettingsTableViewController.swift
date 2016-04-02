@@ -13,36 +13,46 @@ class SettingsTableViewController: UITableViewController, UIImagePickerControlle
     @IBOutlet weak var bgSwitch: UISwitch!
     @IBOutlet weak var bgVariant: UISegmentedControl!
     
-    @IBAction func tappedChooseButton(sender: UIButton) {
+    
+    func showImagePicker(type:UIImagePickerControllerSourceType){
         let imagePicker = UIImagePickerController()
-        
         imagePicker.delegate = self
-
-        NSUserDefaults.standardUserDefaults().setBool(false, forKey: SettingsKey.BG_CUSTOM.rawValue)
-        NSUserDefaults.standardUserDefaults().synchronize();
+        imagePicker.sourceType = type
         
-        let alert = UIAlertController(title: "Choose", message: "CHoose an input type", preferredStyle: .ActionSheet)
+        presentViewController(imagePicker, animated: false){
+            
+        }
+    }
+    
+    @IBAction func tappedChooseButton(sender: UIButton) {
+        NSUserDefaults.standardUserDefaults().setBool(false, forKey: SettingsKey.BG_CUSTOM.rawValue)
+        
+        let alert = UIAlertController(title: "Choose", message: "Choose an input type", preferredStyle: .ActionSheet)
         
         if UIImagePickerController.isSourceTypeAvailable(.Camera) {
             let action = UIAlertAction(title: "Camera", style: .Default, handler: { (ac) in
+                self.showImagePicker(.Camera)
             })
             alert.addAction(action)
         }
         
         if (UIImagePickerController.isSourceTypeAvailable(.SavedPhotosAlbum)) {
             let action = UIAlertAction(title: "Photos", style: .Default, handler: { (ac) in
-                })
+                self.showImagePicker(.SavedPhotosAlbum)
+            })
             
             alert.addAction(action)
         }
         
         let action = UIAlertAction(title:"Cancel", style:.Cancel) { (ac) in
-            
+            NSUserDefaults.standardUserDefaults().setBool(false, forKey: SettingsKey.BG_CUSTOM.rawValue)
+            NSUserDefaults.standardUserDefaults().synchronize();
         }
         
         alert.addAction(action)
-        presentViewController(imagePicker, animated: false) {
-            
+        
+        presentViewController(alert, animated: false) {
+
         }
     }
     
@@ -53,7 +63,6 @@ class SettingsTableViewController: UITableViewController, UIImagePickerControlle
             
             do {
                 try imageData?.writeToFile(NSHomeDirectory() + "/Documents/bg.png", atomically: true)
-                
                 NSUserDefaults.standardUserDefaults().setBool(true, forKey: SettingsKey.BG_CUSTOM.rawValue)
                 NSUserDefaults.standardUserDefaults().synchronize();
             } catch {
@@ -79,6 +88,7 @@ class SettingsTableViewController: UITableViewController, UIImagePickerControlle
         print(sender.selectedSegmentIndex)
         
         NSUserDefaults.standardUserDefaults().setInteger(sender.selectedSegmentIndex + 1, forKey: SettingsKey.BG_OPTION.rawValue);
+        
         NSUserDefaults.standardUserDefaults().setBool(false, forKey: SettingsKey.BG_CUSTOM.rawValue);
         
         NSUserDefaults.standardUserDefaults().synchronize();
@@ -105,7 +115,7 @@ class SettingsTableViewController: UITableViewController, UIImagePickerControlle
         var selIndex = NSUserDefaults.standardUserDefaults().integerForKey(SettingsKey.BG_OPTION.rawValue)
         
         if (selIndex > 0) {
-            selIndex--;
+            selIndex -= 1;
         }
         
         bgVariant.selectedSegmentIndex = selIndex;

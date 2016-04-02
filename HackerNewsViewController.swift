@@ -37,14 +37,11 @@ class HackerNewsTableViewController: UITableViewController {
             if (NSUserDefaults.standardUserDefaults().boolForKey(SettingsKey.BG_CUSTOM.rawValue)) {
                 image = UIImage(contentsOfFile: NSHomeDirectory() + "/Documents/bg.png")
             } else {
-                
-            
                 var option = NSUserDefaults.standardUserDefaults().integerForKey(SettingsKey.BG_OPTION.rawValue)
                 
                 if (option == 0) {
                     option = 1;
                 }
-                
                 
                 image = UIImage(named: "res/bg\(option).jpg");
             }

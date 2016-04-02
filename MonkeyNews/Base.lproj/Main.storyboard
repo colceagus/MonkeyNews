@@ -96,6 +96,9 @@
                                                         <segment title="3"/>
                                                         <segment title="4"/>
                                                     </segments>
+                                                    <connections>
+                                                        <action selector="tappedBgVariant:" destination="KTQ-df-wA6" eventType="valueChanged" id="5Nd-Hg-gBf"/>
+                                                    </connections>
                                                 </segmentedControl>
                                             </subviews>
                                             <constraints>

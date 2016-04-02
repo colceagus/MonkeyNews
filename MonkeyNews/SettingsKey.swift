@@ -6,8 +6,15 @@
 //  Copyright © 2016 training. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-class SettingsKey: NSObject {
-
+enum SettingsKey:String {
+    case BG
+    case BG_OPTION
+    case BG_CUSTOM
+    // case BG2
+    
+    // pot avea metode
+    // pot mosteni alte clase
+    // pot implementa protocoale
 }

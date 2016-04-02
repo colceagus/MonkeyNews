@@ -20,6 +20,8 @@
     
     [[FBSDKApplicationDelegate sharedInstance] application:application                           didFinishLaunchingWithOptions:launchOptions];
     
+    // [[NSUserDefaults standardUserDefaults] integerForKey
+    
     // Override point for customization after application launch.
     return YES;
 }

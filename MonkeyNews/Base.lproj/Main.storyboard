@@ -82,13 +82,55 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Other options" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uPv-rT-NJ9">
-                                                    <rect key="frame" x="8" y="11" width="105" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Background" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uPv-rT-NJ9">
+                                                    <rect key="frame" x="8" y="12" width="92" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hAz-02-MYb">
+                                                    <rect key="frame" x="497" y="7" width="95" height="29"/>
+                                                    <segments>
+                                                        <segment title="1"/>
+                                                        <segment title="2"/>
+                                                        <segment title="3"/>
+                                                        <segment title="4"/>
+                                                    </segments>
+                                                </segmentedControl>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="hAz-02-MYb" secondAttribute="trailing" id="70V-IX-KZy"/>
+                                                <constraint firstItem="hAz-02-MYb" firstAttribute="centerY" secondItem="HHU-gF-Hn3" secondAttribute="centerY" id="92f-h8-uli"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Qef-LY-6Ff">
+                                        <rect key="frame" x="0.0" y="233" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qef-LY-6Ff" id="Onp-sY-Lmg">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Custom Background" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Pw-hz-Mc7">
+                                                    <rect key="frame" x="7" y="11" width="156" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ybT-H7-HKq">
+                                                    <rect key="frame" x="539" y="7" width="53" height="30"/>
+                                                    <state key="normal" title="Choose"/>
+                                                    <connections>
+                                                        <action selector="tappedChooseButton:" destination="KTQ-df-wA6" eventType="touchUpInside" id="c1v-ZJ-cob"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="2Pw-hz-Mc7" firstAttribute="centerY" secondItem="Onp-sY-Lmg" secondAttribute="centerY" id="MZ5-t4-QqQ"/>
+                                                <constraint firstItem="ybT-H7-HKq" firstAttribute="centerY" secondItem="Onp-sY-Lmg" secondAttribute="centerY" id="Qbr-L8-7ne"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="2Pw-hz-Mc7" secondAttribute="leading" id="T3h-wJ-p9z"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ybT-H7-HKq" secondAttribute="trailing" id="c3n-bA-y1i"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -101,6 +143,7 @@
                     </tableView>
                     <connections>
                         <outlet property="bgSwitch" destination="zph-Aw-IUs" id="7Gg-YE-un1"/>
+                        <outlet property="bgVariant" destination="hAz-02-MYb" id="3RJ-0N-XxE"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dL3-Qf-kdM" userLabel="First Responder" sceneMemberID="firstResponder"/>

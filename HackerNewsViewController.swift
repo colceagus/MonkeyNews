@@ -10,14 +10,55 @@ import UIKit
 
 class HackerNewsTableViewController: UITableViewController {
 
+    // viewDidLoad executes only once
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        
+        super.viewWillAppear(animated);
+        
+        // set Background
+        if (NSUserDefaults.standardUserDefaults().boolForKey(SettingsKey.BG.rawValue)) {
+            
+            // let path = NSBundle.mainBundle().pathForResource("bg1", ofType: ".jpg", inDirectory: "res")
+            
+            // print(path)
+            
+            var image:UIImage?;
+        
+            if (NSUserDefaults.standardUserDefaults().boolForKey(SettingsKey.BG_CUSTOM.rawValue)) {
+                image = UIImage(contentsOfFile: NSHomeDirectory() + "/Documents/bg.png")
+            } else {
+                
+            
+                var option = NSUserDefaults.standardUserDefaults().integerForKey(SettingsKey.BG_OPTION.rawValue)
+                
+                if (option == 0) {
+                    option = 1;
+                }
+                
+                
+                image = UIImage(named: "res/bg\(option).jpg");
+            }
+            
+            let imageView = UIImageView(image: image);
+            
+            imageView.contentMode = UIViewContentMode.ScaleAspectFill;
+            
+            print(image);
+            
+            tableView.backgroundView = imageView
+        } else {
+            tableView.backgroundView = nil
+        }
     }
 
     override func didReceiveMemoryWarning() {

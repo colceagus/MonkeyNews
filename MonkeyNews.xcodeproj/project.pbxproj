@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2D14D1D91CAFB0F30092D471 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D14D1D81CAFB0F30092D471 /* SettingsTableViewController.swift */; };
 		2D14D1DC1CAFB92B0092D471 /* SettingsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D14D1DB1CAFB92B0092D471 /* SettingsKey.swift */; };
+		2D14D1DE1CAFC16B0092D471 /* res in Resources */ = {isa = PBXBuildFile; fileRef = 2D14D1DD1CAFC16B0092D471 /* res */; };
 		862566391C94106200BC131D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 862566381C94106200BC131D /* main.m */; };
 		8625663C1C94106200BC131D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8625663B1C94106200BC131D /* AppDelegate.m */; };
 		8625663F1C94106200BC131D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8625663E1C94106200BC131D /* ViewController.m */; };
@@ -24,7 +25,7 @@
 		862E6A7E1C9D5F87004A2594 /* MonkeyNewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862E6A7D1C9D5F87004A2594 /* MonkeyNewsTests.swift */; };
 		864AE4AE1C9D73C50086C5C8 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 864AE4AD1C9D73C50086C5C8 /* Podfile */; };
 		86984C961CA686300042A9DF /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86984C951CA686300042A9DF /* StoryViewController.swift */; };
-		86A8385F1C9D8E1C00729968 /* HackerNewsTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A8385E1C9D8E1C00729968 /* HackerNewsTableTableViewController.swift */; };
+		86A8385F1C9D8E1C00729968 /* HackerNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A8385E1C9D8E1C00729968 /* HackerNewsViewController.swift */; };
 		E3CC1660C3C8D34F21A2ECF5 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95BDFFF23A18820A9E611FEE /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 /* Begin PBXFileReference section */
 		2D14D1D81CAFB0F30092D471 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		2D14D1DB1CAFB92B0092D471 /* SettingsKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsKey.swift; sourceTree = "<group>"; };
+		2D14D1DD1CAFC16B0092D471 /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
 		862566341C94106200BC131D /* MonkeyNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonkeyNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		862566381C94106200BC131D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8625663A1C94106200BC131D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -75,7 +77,7 @@
 		862E6A7F1C9D5F87004A2594 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		864AE4AD1C9D73C50086C5C8 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		86984C951CA686300042A9DF /* StoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
-		86A8385E1C9D8E1C00729968 /* HackerNewsTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackerNewsTableTableViewController.swift; sourceTree = "<group>"; };
+		86A8385E1C9D8E1C00729968 /* HackerNewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackerNewsViewController.swift; sourceTree = "<group>"; };
 		95BDFFF23A18820A9E611FEE /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB647ED86534567A36B9575F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		EB79D3E70CAB7A8057255785 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 		862566371C94106200BC131D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2D14D1DD1CAFC16B0092D471 /* res */,
 				862E6A721C9D45FB004A2594 /* MonkeyNews-Bridging-Header.h */,
 				862566381C94106200BC131D /* main.m */,
 			);
@@ -229,7 +232,7 @@
 			children = (
 				8625663D1C94106200BC131D /* ViewController.h */,
 				8625663E1C94106200BC131D /* ViewController.m */,
-				86A8385E1C9D8E1C00729968 /* HackerNewsTableTableViewController.swift */,
+				86A8385E1C9D8E1C00729968 /* HackerNewsViewController.swift */,
 				86984C951CA686300042A9DF /* StoryViewController.swift */,
 				2D14D1D81CAFB0F30092D471 /* SettingsTableViewController.swift */,
 			);
@@ -356,6 +359,7 @@
 				862566471C94106200BC131D /* LaunchScreen.storyboard in Resources */,
 				862566441C94106200BC131D /* Assets.xcassets in Resources */,
 				864AE4AE1C9D73C50086C5C8 /* Podfile in Resources */,
+				2D14D1DE1CAFC16B0092D471 /* res in Resources */,
 				862566421C94106200BC131D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,7 +437,7 @@
 				862E6A741C9D45FB004A2594 /* HackerNewsAPI.swift in Sources */,
 				8625663F1C94106200BC131D /* ViewController.m in Sources */,
 				2D14D1D91CAFB0F30092D471 /* SettingsTableViewController.swift in Sources */,
-				86A8385F1C9D8E1C00729968 /* HackerNewsTableTableViewController.swift in Sources */,
+				86A8385F1C9D8E1C00729968 /* HackerNewsViewController.swift in Sources */,
 				862566741C94437A00BC131D /* StoryTableViewCell.m in Sources */,
 				8625666D1C942BB700BC131D /* StoryModel.m in Sources */,
 				8625663C1C94106200BC131D /* AppDelegate.m in Sources */,

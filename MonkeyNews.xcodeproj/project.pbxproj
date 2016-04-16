@@ -28,6 +28,7 @@
 		86A8385F1C9D8E1C00729968 /* HackerNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A8385E1C9D8E1C00729968 /* HackerNewsViewController.swift */; };
 		920761321CC236A100269EBA /* PushAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920761311CC236A100269EBA /* PushAPI.swift */; };
 		920761341CC23A9000269EBA /* PushComm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920761331CC23A9000269EBA /* PushComm.swift */; };
+		92969F501CC26914009EEFDF /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 92969F4F1CC26914009EEFDF /* Settings.bundle */; };
 		E3CC1660C3C8D34F21A2ECF5 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95BDFFF23A18820A9E611FEE /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +86,7 @@
 		92969F481CC2475A009EEFDF /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "../../../Library/Developer/Xcode/DerivedData/MonkeyNews-fzocwdmenugaeqdgqpjuccbirfzn/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
 		92969F491CC2475A009EEFDF /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "../../../Library/Developer/Xcode/DerivedData/MonkeyNews-fzocwdmenugaeqdgqpjuccbirfzn/Build/Products/Debug-iphonesimulator/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
 		92969F4A1CC2475A009EEFDF /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "../../../Library/Developer/Xcode/DerivedData/MonkeyNews-fzocwdmenugaeqdgqpjuccbirfzn/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework"; sourceTree = "<group>"; };
+		92969F4F1CC26914009EEFDF /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		95BDFFF23A18820A9E611FEE /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB647ED86534567A36B9575F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		EB79D3E70CAB7A8057255785 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				862566451C94106200BC131D /* LaunchScreen.storyboard */,
 				862566481C94106200BC131D /* Info.plist */,
 				862566371C94106200BC131D /* Supporting Files */,
+				92969F4F1CC26914009EEFDF /* Settings.bundle */,
 			);
 			path = MonkeyNews;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				862566441C94106200BC131D /* Assets.xcassets in Resources */,
 				864AE4AE1C9D73C50086C5C8 /* Podfile in Resources */,
 				2D14D1DE1CAFC16B0092D471 /* res in Resources */,
+				92969F501CC26914009EEFDF /* Settings.bundle in Resources */,
 				862566421C94106200BC131D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

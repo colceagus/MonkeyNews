@@ -8,12 +8,21 @@
 
 import UIKit
 
-class SettingsTableViewController: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class SettingsTableViewController: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate,
+    UITextFieldDelegate{
 
     @IBOutlet weak var bgSwitch: UISwitch!
     @IBOutlet weak var bgVariant: UISegmentedControl!
     
-    
+    @IBOutlet weak var pushMessage: UITextField!
+    @IBAction func tappedSendButton(sender: AnyObject) {
+        PushComm.sendMessage(pushMessage.text!);
+    }
+    // MARK: UITextFieldDelegate
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder();
+        return true;
+    }
     func showImagePicker(type:UIImagePickerControllerSourceType){
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
@@ -120,11 +129,24 @@ class SettingsTableViewController: UITableViewController, UIImagePickerControlle
         
         bgVariant.selectedSegmentIndex = selIndex;
         
+        
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        let tapRecogn = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+        
+        view.addGestureRecognizer(tapRecogn);
+    }
+    
+    func handleTap(rec:UITapGestureRecognizer) {
+        print("tap")
+        // inchide tastatura
+        // se duce pe fiecare view si cheama resignFirstResponder
+        view.endEditing(true);
     }
 
     override func didReceiveMemoryWarning() {

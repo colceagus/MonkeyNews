@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Settings Table View Controller-->
@@ -138,6 +139,39 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="Push" id="Rvj-pc-WL9">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="V68-kr-AT7">
+                                        <rect key="frame" x="0.0" y="328" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="V68-kr-AT7" id="W9l-o9-Dmi">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7TU-T0-kvy">
+                                                    <rect key="frame" x="8" y="6" width="198" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pes-C0-KGd">
+                                                    <rect key="frame" x="546" y="6" width="46" height="30"/>
+                                                    <state key="normal" title="Send"/>
+                                                    <connections>
+                                                        <action selector="tappedSendButton:" destination="KTQ-df-wA6" eventType="touchUpInside" id="G1X-ag-4Kd"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="pes-C0-KGd" secondAttribute="trailing" id="Pb3-BC-7nj"/>
+                                                <constraint firstItem="pes-C0-KGd" firstAttribute="centerY" secondItem="W9l-o9-Dmi" secondAttribute="centerY" id="Tbt-4Y-aWz"/>
+                                                <constraint firstItem="7TU-T0-kvy" firstAttribute="centerY" secondItem="W9l-o9-Dmi" secondAttribute="centerY" id="aeS-7T-fkr"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="7TU-T0-kvy" secondAttribute="leading" id="gHc-c3-JRe"/>
+                                                <constraint firstItem="7TU-T0-kvy" firstAttribute="width" secondItem="W9l-o9-Dmi" secondAttribute="width" multiplier="0.5" id="tWE-xo-2Wb"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="KTQ-df-wA6" id="UbQ-jc-mk0"/>
@@ -147,6 +181,7 @@
                     <connections>
                         <outlet property="bgSwitch" destination="zph-Aw-IUs" id="7Gg-YE-un1"/>
                         <outlet property="bgVariant" destination="hAz-02-MYb" id="3RJ-0N-XxE"/>
+                        <outlet property="pushMessage" destination="7TU-T0-kvy" id="5xO-jq-6w9"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dL3-Qf-kdM" userLabel="First Responder" sceneMemberID="firstResponder"/>

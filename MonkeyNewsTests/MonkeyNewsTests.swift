@@ -49,6 +49,14 @@ class MonkeyNewsTests: XCTestCase {
         
     }
     
+    func testAddToken(){
+        let exp = expectationWithDescription("get token")
+        PushComm.addToken("ColceagsToken123419");
+        waitForExpectationsWithTimeout(5) { (err) in
+            
+        }
+    }
+    
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measureBlock {

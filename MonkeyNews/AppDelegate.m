@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-@import FBSDKCoreKit;
+#import "MonkeyNews-Swift.h"
+@import FBSDKCoreKit; // librarie
 
 @interface AppDelegate ()
 
@@ -15,13 +16,19 @@
 
 @implementation AppDelegate
 
-
+// push notification se primeste in doua locuri in functie de starea aplicatiei
+// aici, daca aplicatia nu este deschisa
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     [[FBSDKApplicationDelegate sharedInstance] application:application                           didFinishLaunchingWithOptions:launchOptions];
     
     // [[NSUserDefaults standardUserDefaults] integerForKey
+    [self askForPush:application];
     
+    
+    NSDictionary* push = [launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
+    
+    NSLog(@"%@", push);
     // Override point for customization after application launch.
     return YES;
 }
@@ -36,6 +43,52 @@
     return handled;
 }
 
+// push notification
+// daca aplicatia ruleaza
+- (void) application: (UIApplication *) app didReceiveRemoteNotification:(nonnull NSDictionary *)userInfo {
+    // cheie apns in userinfo
+    NSLog(@"%@", userInfo);
+}
+//
+// withActionHandler -> push notification with deep linking
+//
+
+
+- (void) application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
+    NSLog(@"%@", deviceToken);
+    
+    NSString* token = deviceToken.description;
+    token = [token stringByReplacingOccurrencesOfString:@"<" withString:@""];
+    token = [token stringByReplacingOccurrencesOfString:@">" withString:@""];
+    token = [token stringByReplacingOccurrencesOfString:@" " withString:@""];
+    
+    NSLog(@"%@", token);
+    
+    [PushComm addToken:token];
+    
+    
+}
+
+- (void)application: (UIApplication*)app didFailToRegisterForRemoteNotificationsWithError:(nonnull NSError *)error{
+    NSLog(@"%@", error);
+}
+
+- (void) application: (UIApplication*) app didRegisterUserNotificationSettings:(nonnull UIUserNotificationSettings *)notificationSettings {
+    
+    if (notificationSettings != UIUserNotificationTypeNone) {
+        [app registerForRemoteNotifications];
+    }
+}
+//
+- (void) askForPush:(UIApplication*) app {
+    UIUserNotificationSettings* settings = [UIUserNotificationSettings
+                                            settingsForTypes:UIUserNotificationTypeAlert|
+                                                            UIUserNotificationTypeBadge|
+                                                             UIUserNotificationTypeSound
+                                            
+                                                categories:nil]; // actiune swipe left/right pe push notification la categorii pentru o identificare mai buna
+    [app registerUserNotificationSettings:settings];
+}
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

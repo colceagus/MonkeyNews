@@ -26,6 +26,8 @@
 		864AE4AE1C9D73C50086C5C8 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 864AE4AD1C9D73C50086C5C8 /* Podfile */; };
 		86984C961CA686300042A9DF /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86984C951CA686300042A9DF /* StoryViewController.swift */; };
 		86A8385F1C9D8E1C00729968 /* HackerNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A8385E1C9D8E1C00729968 /* HackerNewsViewController.swift */; };
+		920761321CC236A100269EBA /* PushAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920761311CC236A100269EBA /* PushAPI.swift */; };
+		920761341CC23A9000269EBA /* PushComm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920761331CC23A9000269EBA /* PushComm.swift */; };
 		E3CC1660C3C8D34F21A2ECF5 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95BDFFF23A18820A9E611FEE /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +80,11 @@
 		864AE4AD1C9D73C50086C5C8 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		86984C951CA686300042A9DF /* StoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
 		86A8385E1C9D8E1C00729968 /* HackerNewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackerNewsViewController.swift; sourceTree = "<group>"; };
+		920761311CC236A100269EBA /* PushAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushAPI.swift; sourceTree = "<group>"; };
+		920761331CC23A9000269EBA /* PushComm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushComm.swift; sourceTree = "<group>"; };
+		92969F481CC2475A009EEFDF /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "../../../Library/Developer/Xcode/DerivedData/MonkeyNews-fzocwdmenugaeqdgqpjuccbirfzn/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
+		92969F491CC2475A009EEFDF /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "../../../Library/Developer/Xcode/DerivedData/MonkeyNews-fzocwdmenugaeqdgqpjuccbirfzn/Build/Products/Debug-iphonesimulator/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
+		92969F4A1CC2475A009EEFDF /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "../../../Library/Developer/Xcode/DerivedData/MonkeyNews-fzocwdmenugaeqdgqpjuccbirfzn/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework"; sourceTree = "<group>"; };
 		95BDFFF23A18820A9E611FEE /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB647ED86534567A36B9575F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		EB79D3E70CAB7A8057255785 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -112,6 +119,9 @@
 		13E62FE252526699F9D71674 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				92969F481CC2475A009EEFDF /* FBSDKCoreKit.framework */,
+				92969F491CC2475A009EEFDF /* FBSDKLoginKit.framework */,
+				92969F4A1CC2475A009EEFDF /* FBSDKShareKit.framework */,
 				95BDFFF23A18820A9E611FEE /* Pods.framework */,
 			);
 			name = Frameworks;
@@ -213,6 +223,8 @@
 			children = (
 				862E6A731C9D45FB004A2594 /* HackerNewsAPI.swift */,
 				862E6A751C9D4C06004A2594 /* HackerNewsComm.swift */,
+				920761311CC236A100269EBA /* PushAPI.swift */,
+				920761331CC23A9000269EBA /* PushComm.swift */,
 			);
 			name = Comm;
 			path = ..;
@@ -320,6 +332,12 @@
 				TargetAttributes = {
 					862566331C94106200BC131D = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = U25ZWZE6YN;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					862566571C94106300BC131D = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -436,11 +454,13 @@
 				86984C961CA686300042A9DF /* StoryViewController.swift in Sources */,
 				862E6A741C9D45FB004A2594 /* HackerNewsAPI.swift in Sources */,
 				8625663F1C94106200BC131D /* ViewController.m in Sources */,
+				920761321CC236A100269EBA /* PushAPI.swift in Sources */,
 				2D14D1D91CAFB0F30092D471 /* SettingsTableViewController.swift in Sources */,
 				86A8385F1C9D8E1C00729968 /* HackerNewsViewController.swift in Sources */,
 				862566741C94437A00BC131D /* StoryTableViewCell.m in Sources */,
 				8625666D1C942BB700BC131D /* StoryModel.m in Sources */,
 				8625663C1C94106200BC131D /* AppDelegate.m in Sources */,
+				920761341CC23A9000269EBA /* PushComm.swift in Sources */,
 				862566391C94106200BC131D /* main.m in Sources */,
 				862E6A761C9D4C06004A2594 /* HackerNewsComm.swift in Sources */,
 				2D14D1DC1CAFB92B0092D471 /* SettingsKey.swift in Sources */,
@@ -588,9 +608,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = MonkeyNews/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Gorillaz.MonkeyNews;
+				PRODUCT_BUNDLE_IDENTIFIER = ro.mobileacademy.newsreaderpush;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "MonkeyNews-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -604,9 +625,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = MonkeyNews/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Gorillaz.MonkeyNews;
+				PRODUCT_BUNDLE_IDENTIFIER = ro.mobileacademy.newsreaderpush;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "MonkeyNews-Bridging-Header.h";
 			};
